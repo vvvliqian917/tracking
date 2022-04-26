@@ -1,6 +1,6 @@
 {
   "name": "tracking",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "description": "track for web app weapp",
   "repository": "git@github.com:vvvliqian917/tracking.git",
