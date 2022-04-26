@@ -3,7 +3,7 @@
 ##### 安装
 
 ```
-yarn add @wyny/tracking
+yarn add tracking
 ```
 
 ##### 使用
