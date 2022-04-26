@@ -1,0 +1,43 @@
+{
+  "name": "tracking",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "description": "track for web app weapp",
+  "repository": "git@github.com:vvvliqian917/tracking.git",
+  "author": "vvvliqian917 <vvvliqian@163.com>",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn build && np --no-cleanup --yolo --no-publish",
+    "lint": "eslint --ext .js,.ts --fix"
+  },
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "np": "^7.6.1",
+    "eslint": "^6.7.2",
+    "prettier": "^2.5.1",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.0",
+    "@typescript-eslint/parser": "^5.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "typescript": "^4.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.{js,ts}": [
+      "prettier --write",
+      "yarn run lint",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
